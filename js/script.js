@@ -1,10 +1,15 @@
+//Boburshoh Khusanov
+//Telegram @khusanov_blog
+//Instagram boburshoh_1
+//GitHub github.com/Boburshohh
+
 const tabs = document.querySelectorAll('.tabheader__item'),
-    tabsParent = document.querySelectorAll('.tabheader__items'),
+    tabsParent = document.querySelector('.tabheader__items'),
     tabsContent = document.querySelectorAll('.tabcontent');
 
 
 function hideTabContent(){
-    tabs.forEach((item, i, tabs) =>{
+    tabsContent.forEach((item, i, tabs) =>{
         item.classList.add('none')
         item.classList.remove('show', 'fade')
     })
@@ -19,5 +24,16 @@ function showTabContent(i=0){
 }
 hideTabContent()
 showTabContent()
+
+tabsParent.addEventListener('click',(event )=>{
+    if(event.target && event.target.classList.contains('tabheader__item')){
+        tabs.forEach((item, i) =>{
+          if(event.target == item){
+              hideTabContent()
+              showTabContent(i)
+          }
+        })
+    }
+})
 
 
