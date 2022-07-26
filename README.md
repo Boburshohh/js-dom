@@ -1,2 +1,1 @@
-# js-dom
-Java scpirt dom kichik loyiya
+# practise2_tutorial
