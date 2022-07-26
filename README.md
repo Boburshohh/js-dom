@@ -1,1 +1,1 @@
-# practise2_tutorial
+# JS dom sodda praktika.
